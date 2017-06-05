@@ -1,0 +1,183 @@
+#form{
+  .row{
+    max-width: 1000px;
+    margin: 70px auto;
+    @include mobile{
+      margin: 40px auto 0;
+    }
+  }
+  .form{
+    text-align: center;
+    margin-bottom: 40px;
+    @include mobile-sm{
+      padding: 0;
+    }
+    h5{
+      font-size: 40px;
+      color: white;
+      position: relative;
+      padding-bottom: 10px;
+      margin-bottom: 25px;
+      font-family: 'Bebas Neue';
+      @include desktop-normal{
+        font-size: 36px;
+      }
+      @include mobile-sm{
+        font-size: 30px;
+      }
+      &::after{
+        content: '';
+        width: 72px;
+        height: 2px;
+        background-color: #484848;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 85%;
+        margin:  0 auto;
+        display: block;
+      }
+    }
+    form{
+      border-radius: 10px;
+      background-image: -moz-linear-gradient( -90deg, rgb(251,143,34) 0%, rgb(236,74,13) 100%);
+      background-image: -webkit-linear-gradient( -90deg, rgb(251,143,34) 0%, rgb(236,74,13) 100%);
+      background-image: -ms-linear-gradient( -90deg, rgb(251,143,34) 0%, rgb(236,74,13) 100%);
+      box-shadow: 0px 0px 9.5px 0.5px rgba(129, 129, 129, 0.5);
+      padding: 10px;
+      box-sizing: border-box;
+      width: 369px;
+      height: 455px;
+      @include mobile{
+        margin: 0 auto;
+      }
+      @include mobile-sm{
+        width: 320px;
+      }
+      .input-field{
+        margin-bottom: 24px;
+        input{
+          background-color: rgb(252, 252, 252);
+          box-shadow: inset 0px 0px 3.92px 0.08px rgba(236, 74, 13, 0.5);
+          width: 320px;
+          height: 30px;
+          border: none;
+          border-radius: 50px;
+          padding: 0 15px;
+          color: #939393;
+          outline: none;
+          @include mobile-sm{
+            width: 280px;
+          }
+          &:focus{
+            box-shadow: inset 0px 0px 8px 0.1px rgba(242, 72, 8, 0.7);
+          }
+          &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: #b0b0b0;
+          }
+          &::-moz-placeholder { /* Firefox 19+ */
+            color: #b0b0b0;
+          }
+          &:-ms-input-placeholder { /* IE 10+ */
+            color: #b0b0b0;
+          }
+          &:-moz-placeholder { /* Firefox 18- */
+            color: #b0b0b0;
+          }
+        }
+      }
+      .bill{
+        margin-top: 25px;
+      }
+      .btn-sb{
+        background-color: rgb(72, 72, 72);
+        box-shadow: 0px 0px 9.5px 0.5px rgba(129, 129, 129, 0.8);
+        width: 317px;
+        height: 42px;
+        border-radius: 50px;
+        border: none;
+        color: white;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        font-family: 'Roboto';
+        @include mobile-sm{
+          width: 270px;
+        }
+        &:hover{
+          background-color: rgb(60, 59, 59);
+        }
+      }
+      .field{
+        position: relative;
+        margin-bottom: 24px;
+        .file{
+          opacity: 0;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          cursor: pointer;
+          &:hover + .btn{
+            background-color: rgba(205, 205, 205, 0.302);
+          }
+        }
+        label{
+          font-size: 16px;
+          color: rgb(255, 255, 255);
+          font-weight: bold;
+          line-height: 1;
+          margin-bottom: 0;
+          margin-bottom: 10px;
+          font-family: 'Roboto';
+          @include mobile-sm{
+            font-size: 15px;
+          }
+        }
+        .btn{
+          border-style: solid;
+          border-width: 1px;
+          border-color: rgb(255, 255, 255);
+          background-color: rgba(255, 255, 255, 0.302);
+          background-image: url("../assets/icon_photo.png");
+          background-repeat: no-repeat;
+          background-position: 90% center;
+          box-shadow: 0px 0px 9.5px 0.5px rgba(129, 129, 129, 0.4);
+          transition: all 0.3s ease;
+          width: 198px;
+          height: 36px;
+          color: white;
+          border-radius: 30px;
+          font-weight: 600;
+          text-align: left;
+          box-sizing: border-box;
+          padding: 0 30px;
+          font-family: 'Roboto';
+          @include mobile-sm{
+            background-size: 24px 18px;
+            font-size: 13px;
+            width: 160px;
+            padding: 0 20px;
+          }
+        }
+      }
+    }
+  }
+  .img{
+    @include mobile{
+      text-align: center;
+    }
+    img{
+      width: 100%;
+      height: auto;
+      @include desktop-normal{
+        width: 80%;
+        float: right;
+      }
+      @include mobile{
+        float: none;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,204 @@
+#gallery{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  .row >.title{
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    h4{
+      color: $orange;
+      font-weight: 600;
+      font-size: 56px;
+      line-height: 1;
+      margin-bottom: 0px;
+      font-family: 'Bebas Neue';
+      @include desktop-normal{
+        font-size: 50px;
+      }
+      @include mobile{
+        font-size: 38px;
+      }
+      @include mobile-sm{
+        font-size: 30px;
+      }
+    }
+    span{
+      color: #6b6b6b;
+      font-family: 'Bebas Neue';
+      line-height: 1;
+      display: block;
+      margin-top: -8px;
+    }
+    &::after{
+      content: "";
+      width: 119px;
+      height: 3px;
+      background-color: #fb8f22;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      display: block;
+      top: 100%;
+    }
+  }
+  .grid{
+    width: 97% !important;
+    margin: 0 0% 0 2.4%;
+    overflow: hidden;
+    max-height: 865px;
+    padding-right: 0% !important;
+    @include desktop-normal{
+      max-height: 880px;
+    }
+    @include mobile{
+      max-height: 800px;
+    }
+    @include mobile-full{
+      text-align: center;
+      max-height: 780px;
+    }
+    .jspContainer{
+      width: 100% !important;
+      .jspPane{
+        width: 98% !important;
+      }
+      .jspVerticalBar{
+        border-radius: 10px;
+        overflow: hidden;
+        width: 8px;
+        right: 5px;
+        .jspTrack{
+          background-color: #bebebe;
+          padding: 1px;
+          box-sizing: border-box;
+          border-radius: 10px;
+          overflow: hidden;
+          .jspDrag{
+            background-image: -moz-linear-gradient( 90deg, rgb(236,74,13) 0%, rgb(251,143,34) 100%);
+            background-image: -webkit-linear-gradient( 90deg, rgb(236,74,13) 0%, rgb(251,143,34) 100%);
+            background-image: -ms-linear-gradient( 90deg, rgb(236,74,13) 0%, rgb(251,143,34) 100%);
+            box-shadow: 0px 1px 3px 0px rgba(152, 154, 155, 0.004),inset 0px 1px 0px 0px rgba(251, 143, 34, 0.004);
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+    .item{
+      width: 23%;
+      float: left;
+      margin: 0px 1.3% 64px;
+      max-width: 274px;
+      @include desktop-normal{
+        width: 31%;
+        max-width: 290px;
+      }
+      @include mobile{
+        width: 47%;
+        margin-bottom: 10px;
+      }
+      @include mobile-full{
+        width: 260px;
+        float: none;
+        display: inline-block;
+      }
+      &:first-child,
+      &:nth-child(4n+1){
+        margin-left: 0;
+      }
+      &:nth-child(4n+4){
+        margin-right: 0%;
+      }
+      @include desktop-normal{
+        &:first-child,
+        &:nth-child(4n+1){
+          margin-left: 1.3% !important;
+        }
+        &:nth-child(4n+4){
+          margin-right: 1.3% !important;
+        }
+        &:first-child,
+        &:nth-child(3n+1){
+          margin-left: 0;
+        }
+        &:nth-child(3n+3){
+          margin-right: 0%;
+        }
+      }
+      @include mobile{
+        &:first-child,
+        &:nth-child(3n+1){
+          margin-left: 1.3%;
+        }
+        &:nth-child(3n+3){
+          margin-right: 1.3%;
+        }
+
+        &:first-child,
+        &:nth-child(2n+1){
+          margin-left: 0% !important;
+        }
+        &:nth-child(2n+2){
+          margin-right: 0% !important;
+        }
+      }
+      .img{
+        border-radius: 14px;
+        overflow: hidden;
+        img{
+          width: 100%;
+        }
+      }
+      .title{
+        padding: 20px 0;
+        border-bottom: 1px solid #fb8f22;
+        span, p{
+          font-family: 'Roboto';
+          font-weight: 600;
+        }
+        span{
+          color: #6b6b6b;
+          margin-bottom: 0;
+          display: block;
+        }
+        p{
+          color: $orange;
+          font-size: 24px;
+          line-height: 1;
+          margin-bottom: 0;
+          display: block;
+        }
+      }
+      .description{
+        padding: 10px 0;
+        .price{
+          font-size: 24px;
+          color: #484848;
+          font-weight: 600;
+          font-family: 'Roboto';
+        }
+        input{
+          float: right;
+          background-color: rgb(72, 72, 72);
+          box-shadow: 0px 0px 5.82px 0.18px rgba(129, 129, 129, 0.8);
+          width: 135px;
+          height: 38px;
+          border-radius: 50px;
+          color: white;
+          outline: none;
+          border: none;
+          font-weight: 600;
+          transition: all 0.3s ease;
+          font-family: 'Roboto';
+          &:hover{
+            background-color: rgb(56, 56, 56);
+          }
+        }
+      }
+    }
+  }
+}

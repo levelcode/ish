@@ -1,0 +1,126 @@
+.box-container{
+  width: 96%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 9.5px 0.5px rgba(129, 129, 129, 0.5);
+  // margin: -50px auto 50px;
+  padding: 25px 0;
+  box-sizing: border-box;
+}
+#steps{
+  display: block;
+  position: relative;
+  top: -190px;
+  margin-bottom: -190px;
+  .title{
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+    padding: 20px 0;
+    box-sizing: border-box;
+    @include mobile{
+      padding: 10px 0;
+    }
+    span{
+      color: $gray-text;
+      font-family: 'Bebas Neue';
+    }
+    h4{
+      font-size: 56px;
+      color: $orange;
+      position: relative;
+      padding-bottom: 20px;
+      line-height: 0.7;
+      font-family: 'Bebas Neue';
+      @include desktop-normal{
+        font-size: 50px;
+      }
+      @include mobile{
+        font-size: 38px;
+      }
+      @include mobile-sm{
+        font-size: 30px;
+      }
+      &::after{
+        content: "";
+        width: 120px;
+        height: 3px;
+        background-color: #fb8f22;
+        position: absolute;
+        top: 85%;
+        left: 0;
+        right: 0;
+        margin: 0px auto 0;
+      }
+    }
+  }
+  .grid{
+    ul{
+      overflow: hidden;
+      padding: 0;
+      width: 90%;
+      margin: 0 auto;
+      max-width: 970px;
+      @include desktop-normal{
+        width: 96%;
+      }
+      @include mobile{
+        text-align: center;
+        width: 100%;
+      }
+      li{
+        display: block;
+        text-align: center;
+        width: 20%;
+        float: left;
+        @include desktop-normal{
+          box-sizing: border-box;
+          padding: 1%;
+        }
+        @include mobile{
+          width: 182px;
+          height: 300px;
+          display: inline-block;
+          float: none;
+          vertical-align: top;
+        }
+        img{
+          margin-bottom: 10px;
+          width: 100%;
+          height: auto;
+          max-width: 154px;
+        }
+        &, p, span{
+          margin-bottom: 0;
+          font-family: 'Bebas Neue';
+        }
+        p, span{
+          margin: 0 auto;
+          display: block;
+        }
+        p{
+          color: #fb8f22;
+          font-size: 24px;
+          width: 75%;
+          line-height: 1;
+          text-transform: uppercase;
+          @include desktop-normal{
+            font-size: 18px;
+            width: 102%;
+          }
+        }
+        span{
+          width: 72%;
+          color: #484848;
+          font-size: 16px;
+          line-height: 1.1;
+          margin-top: 5px;
+          @include desktop-normal{
+            font-size: 15px;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

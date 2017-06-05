@@ -1,0 +1,31 @@
+#footer{
+  background-image: -moz-linear-gradient( 90deg, rgb(236,74,13) 0%, rgb(251,143,34) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(236,74,13) 0%, rgb(251,143,34) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(236,74,13) 0%, rgb(251,143,34) 100%);
+  height: 86px;
+  padding-top: 24px;
+  @include mobile-sm{
+    text-align: center;
+    height: 130px;
+  }
+  .img{
+    text-align: right;
+    @include mobile-sm{
+      text-align: center;
+      display: block;
+      width: 100%;
+      margin-top: 15px;
+    }
+  }
+  .title{
+    color: white;
+    font-size: 24px;
+    line-height: 1.4;
+    font-family: 'Roboto';
+    @include mobile-sm{
+      display: block;
+      width: 100%;
+      padding: 0;
+    }
+  }
+}

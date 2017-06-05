@@ -1,0 +1,30 @@
+{
+  "name": "ish",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "MichaelAlfonso"
+  ],
+  "developer": "Michael Alfonso Martinez <michael950626@gmail.com>",
+  "license": "ISC",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "js-base64": "^2.1.9",
+    "moment": "^2.14.1",
+    "bootstrap": "^3.3.7"
+  },
+  "devDependencies": {
+    "jquery": "^3.0.0",
+    "js-base64": "^2.1.9",
+    "moment": "^2.14.1",
+    "bootstrap": "^3.3.7"
+  }
+}

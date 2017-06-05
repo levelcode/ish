@@ -1,0 +1,218 @@
+body{
+  background-color: $background-general;
+  &::before{
+    content: "";
+    background: url("../assets/focus.png") no-repeat;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    background-size: 100%;
+  }
+}
+ul, li{
+  list-style: none;
+}
+.container{
+  width: 100%;
+  padding: 0;
+}
+.row{
+  max-width: $desktop-width;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+.banner{
+  position: relative;
+  min-height: 350px;
+  @include desktop-normal{
+    margin-top: 30px;
+    min-height: 300px;
+  }
+  @include mobile-sm{
+    min-height: 250px;
+  }
+  .row{
+    .col{
+      max-width: 980px;
+      margin: 0 auto;
+      float: none;
+      @include mobile{
+        max-width: 700px;
+        width: 96%;
+      }
+      @include mobile-sm{
+        width: 100%;
+      }
+    }
+  }
+  .img{
+    img{
+      width: 68%;
+      @include mobile{
+        width: 54%;
+      }
+      @include mobile-full{
+        display: none;
+      }
+    }
+  }
+  .description{
+    width: 240px;
+    margin-top: -22%;
+    @include desktop-normal{
+      margin-top: -21%;
+      position: relative;
+      left: 20px;
+    }
+    @include mobile{
+      width: 90%;
+      max-width: 400px;
+      margin: 20px auto 0;
+      text-align: center;
+      float: none !important;
+      left: inherit;
+    }
+    @include mobile-full{
+      margin-top: 0px;
+    }
+    @include mobile-sm{
+      width: 100%;
+    }
+    p,span,a{
+      font-family: 'Roboto';
+      color: #484848;
+    }
+  }
+  .description,
+  .title{
+    float: right;
+  }
+  .title{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: $orange;
+    @include mobile-full{
+      position: static;
+      display: block;
+      width: 100%;
+      right: inherit;
+    }
+    &, h4,h5,h3{
+      text-transform: uppercase;
+      text-align: center;
+    }
+    h4{
+      font-size: 120px;
+      position: relative;
+      top: -75px;
+      z-index: 1;
+      font-family: 'HelveticaBL';
+      font-weight: 900;
+      line-height: 2;
+      background: -webkit-linear-gradient(#f9851f , #ec4b0d);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      @include desktop-normal{
+        font-size: 110px;
+      }
+      @include mobile{
+        font-size: 90px;
+      }
+      @include mobile-sm{
+        font-size: 65px;
+      }
+    }
+    h3, h5{
+      font-size: 64px;
+      line-height: 0.8;
+      font-family: 'Helvetica';
+      margin: 0;
+      color: $orange;
+      background: none;
+      -webkit-background-clip: inherit;
+      @include desktop-normal{
+        font-size: 59px;
+      }
+      @include mobile{
+        font-size: 48px;
+      }
+      @include mobile-sm{
+        font-size: 40px;
+      }
+    }
+    h3{
+      font-family: 'Helvetica';
+      font-size: 48px;
+      font-style: normal;
+      @include desktop-normal{
+        font-size: 44px;
+      }
+      @include mobile{
+        font-size: 36px;
+      }
+      @include mobile-sm{
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+#main{
+  background-image: -moz-linear-gradient( -90deg, rgb(251,143,34) 0%, rgb(236,74,13) 100%);
+  background-image: -webkit-linear-gradient( -90deg, rgb(251,143,34) 0%, rgb(236,74,13) 100%);
+  background-image: -ms-linear-gradient( -90deg, rgb(251,143,34) 0%, rgb(236,74,13) 100%);
+  max-width: 1340px;
+  margin: 190px auto 660px;
+  box-sizing: border-box;
+  padding: 17px;
+  @include desktop-normal{
+    margin-bottom: 594px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @include mobile{
+    margin-bottom: 500px;
+  }
+  @include mobile-full{
+    margin-bottom: 470px;
+  }
+  @include mobile-sm{
+    margin-bottom: 500px;
+  }
+  .main{
+    background: $gray-bg-main url("../../assets/focus-main.png") no-repeat;
+    background-size: 100% auto;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 470px;
+  }
+}
+
+@media (min-width: 768px){
+  .col-md-5 {
+    width: 41.66666667%;
+  }
+  .col-md-7 {
+    width: 58.33333333%;
+  }
+}
