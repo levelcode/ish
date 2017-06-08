@@ -35,7 +35,10 @@
 
       </ul>
     </div>
-
+    <div class="terms"><a href="#">Ver términos y condiciones</a></div>
+    <div class="time">
+      Tienes hasta el <strong>27 de Junio</strong> para registrar tu factura. Fecha de votaciones del <strong>28 al 30 de Junio</strong>.
+    </div>
 
   </div>
 </div>

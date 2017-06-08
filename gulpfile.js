@@ -20,6 +20,10 @@ var vendorDependencies = [
   bowerFolder + 'bootstrap/dist/js/bootstrap.min.js',
   bowerFolder + 'jScrollPane/script/jquery.mousewheel.js',
   bowerFolder + 'jScrollPane/script/jquery.jscrollpane.min.js',
+  bowerFolder + 'sweetalert2/dist/sweetalert2.min.js',
+  bowerFolder + 'datatables.net/js/jquery.dataTables.min.js',
+  nodemodules + 'formvalidation/dist/js/formValidation.min.js',
+  nodemodules + 'formvalidation/dist/js/framework/bootstrap.min.js',
 ];
 gulp.task('watch', function(){
   gulp.watch('js/scripts.js', ['compile-js']);

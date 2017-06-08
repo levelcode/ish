@@ -1,3 +1,11 @@
+<?php if(isset($_SESSION['fb_user'])): ?>
+  <div id="user-bar">
+    <div class="img"><img src="<?php print $_SESSION['fb_user']["picture"]["url"]; ?>" alt=""></div>
+    <div class="name"><a href="/services/logout.php">Salir</a></div>
+    <div class="name">|</div>
+    <div class="name"><?php print $_SESSION['fb_user']["name"]; ?></div>
+  </div>
+<?php endif; ?>
 <div id="header" class="container">
   <div class="row">
     <div class="col col-xs-12 col-md-12 col-lg-10 col-lg-offset-1">
@@ -25,8 +33,8 @@
           </div>
           <div class="other-logos">
             <ul class="logos">
+              <li class="lg2"><img src="../assets/ishop2.png" alt="logo2" title="logo2"></li>
               <li class="lg1"><img src="../assets/logoadicional1.png" alt="logo1" title="logo1"></li>
-              <li class="lg2"><img src="../assets/logoadicional2.png" alt="logo2" title="logo2"></li>
             </ul>
           </div>
         </div>
