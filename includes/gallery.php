@@ -24,8 +24,8 @@
             <p><?php print $value['Nombre_del_juguete'] ?></p>
           </div>
           <div class="description">
-            <span class="price">500 puntos</span>
-            <input type="button" value="VOTAR">
+            <span class="price"><?php print empty($value['Puntos'])?'0':$value['Puntos'] ?> puntos</span>
+            <input type="button" data="<?php print $value['id'] ?>" class="vote" value="VOTAR">
           </div>
         </div>
       <?php endforeach; ?>

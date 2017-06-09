@@ -25,6 +25,34 @@ $(function(){
 			contentWidth: "0px",
 			contentWidth: "0px",
 		});
+
+		$(".vote").on('click', function(event) {
+			event.preventDefault();
+			var _this = $(this);
+			var formData = new FormData();
+			var id = _this.attr('data');
+			var vote = _this.siblings('.price').text();
+			vote = parseInt(vote);
+			formData.append('id', id);
+			formData.append('vote', vote);
+			$.ajax({
+					url: "/services/vote.php",
+					type: 'POST',
+					data: formData,
+					cache: false,
+					contentType: false,
+					processData: false,
+					type: 'POST',
+					success: function(r) {
+						_this.siblings('.price').text((vote+100)+' puntos');
+						swal({
+							text: 'Gracias por votar',
+							type: 'success',
+							confirmButtonColor: '#fb8f22',
+						});
+					}
+			});
+		});
 	}
 
 	function readURL(input,el) {
