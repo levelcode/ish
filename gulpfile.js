@@ -9,6 +9,9 @@ var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var cssclean = require('gulp-clean-css');
+var cssclean = require('gulp-clean-css');
+var javascriptObfuscator = require('gulp-javascript-obfuscator');
+
 
 var bowerFolder = 'bower_components/';
 var nodemodules = 'node_modules/';
@@ -35,6 +38,9 @@ gulp.task('compile-vendor-files', function(cb) {
     gulp.src(vendorDependencies),
     concat('vendors.min.js'),
     uglify(),
+    // javascriptObfuscator({
+    //   compact:true
+    // }),
     gulp.dest('./js/'),
   ], cb);
 });
@@ -52,6 +58,9 @@ gulp.task('compile-js', function(cb) {
     gulp.src('js/scripts.js'),
     rename('scripts.min.js'),
     uglify(),
+    // javascriptObfuscator({
+    //   compact:true
+    // }),
     gulp.dest('./js/'),
   ], cb);
 });

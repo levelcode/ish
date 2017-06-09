@@ -1,5 +1,6 @@
 <?php
   require_once($_SERVER['DOCUMENT_ROOT'].'/libraries/connection.php');
+  date_default_timezone_set("America/Bogota");
   $mysql = new MySQL();
   $query = "SELECT * FROM `products` INNER JOIN `users` ON `users`.`id` = `products`.`Id_usuario` WHERE `Estado` = 1 ";
   $products = $mysql->query($query);
@@ -25,7 +26,9 @@
           </div>
           <div class="description">
             <span class="price"><?php print empty($value['Puntos'])?'0':$value['Puntos'] ?> puntos</span>
-            <input type="button" data="<?php print $value['id'] ?>" class="vote" value="VOTAR">
+            <?php //if( date("F j, Y, g:i a") == 'June 27, 2017, 1:00 am' ): ?>
+              <input type="button" data="<?php print $value['id'] ?>" class="vote" value="VOTAR">
+            <?php //endif; ?>
           </div>
         </div>
       <?php endforeach; ?>

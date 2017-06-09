@@ -16,7 +16,7 @@
           <input class="form-control" type="text" name="phone" placeholder="Telefono">
         </div>
         <div class="name-toy input-field form-group">
-          <input class="form-control" type="text" name="mail" placeholder="Email">
+          <input class="form-control" type="text" name="mail" placeholder="E-mail">
         </div>
         <div class="name-toy input-field form-group">
           <input class="form-control" type="text" name="country" placeholder="Ciudad">

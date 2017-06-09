@@ -18,10 +18,10 @@
         <div class="nav">
           <div id="main-menu">
             <ul class="menu">
-              <li><a href="#">INICIO</a></li>
-              <li><a href="#">INSTRUCCIONES</a></li>
-              <li><a href="#">REGISTRO</a></li>
-              <li><a href="#">GALERÍA</a></li>
+              <li data="1"><a href="#">INICIO</a></li>
+              <li data="2"><a href="#">INSTRUCCIONES</a></li>
+              <li data="3"><a href="#">REGISTRO</a></li>
+              <li data="4"><a href="#">GALERÍA</a></li>
             </ul>
           </div>
           <div class="social-links">

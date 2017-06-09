@@ -8,14 +8,23 @@ $(function(){
 	}
 
 	function resizeBlock() {
-		if( $("#gallery").height() < 500 ){
-			$("#main").css("margin-bottom",'50px');
+		if( $("#gallery").height() < 610 ){
+			$("#main").css("margin-bottom",'160px');
 		}else{
 			$("#main").css("margin-bottom",'');
 		}
 	}
 
 	function galleryJScrollPane() {
+		$("#gallery .grid .item .img").each(function(index, el) {
+			var h = $(this).children('img').height();
+			if( h < 274 ){
+				$(this).css("min-height",'240px');
+			}else{
+				$(this).css("min-height",'');
+			}
+		});
+
 		$('#gallery .grid').jScrollPane({
 			animateDuration: 150,
 			autoReinitialise: true,
@@ -44,12 +53,21 @@ $(function(){
 					processData: false,
 					type: 'POST',
 					success: function(r) {
-						_this.siblings('.price').text((vote+100)+' puntos');
-						swal({
-							text: 'Gracias por votar',
-							type: 'success',
-							confirmButtonColor: '#fb8f22',
-						});
+						console.log(r);
+						if( r != true ){
+							swal({
+								text: 'Error',
+								type: 'error',
+								confirmButtonColor: '#fb8f22',
+							});
+						}else{
+							_this.siblings('.price').text((vote+100)+' puntos');
+							swal({
+								text: 'Gracias por votar',
+								type: 'success',
+								confirmButtonColor: '#fb8f22',
+							});
+						}
 					}
 			});
 		});
@@ -110,7 +128,7 @@ $(function(){
 							message: ' '
 						},
 						stringLength: {
-							min: 6,
+							min: 3,
 							max: 30,
 							message: ' '
 						},
@@ -126,7 +144,7 @@ $(function(){
 							message: ' '
 						},
 						stringLength: {
-							min: 6,
+							min: 3,
 							max: 30,
 							message: ' '
 						},
@@ -142,7 +160,7 @@ $(function(){
 							message: ' '
 						},
 						stringLength: {
-							min: 6,
+							min: 3,
 							max: 30,
 							message: ' '
 						},
@@ -158,7 +176,7 @@ $(function(){
 							message: ' '
 						},
 						stringLength: {
-							min: 6,
+							min: 3,
 							max: 30,
 							message: ' '
 						},
@@ -174,7 +192,7 @@ $(function(){
 							message: ' '
 						},
 						stringLength: {
-							min: 6,
+							min: 3,
 							max: 30,
 							message: ' '
 						},
@@ -190,7 +208,7 @@ $(function(){
 							message: ' '
 						},
 						stringLength: {
-							min: 6,
+							min: 3,
 							max: 30,
 							message: ' '
 						},
@@ -202,7 +220,7 @@ $(function(){
 							message: ' '
 						},
 						stringLength: {
-							min: 6,
+							min: 3,
 							max: 30,
 							message: ' '
 						},
@@ -218,7 +236,7 @@ $(function(){
 							message: ' '
 						},
 						stringLength: {
-							min: 6,
+							min: 3,
 							max: 30,
 							message: ' '
 						},
@@ -299,8 +317,8 @@ $(function(){
 			    success: function(r) {
 						$.get( "includes/gallery.php", function( data ) {
 							$( "#gallery" ).replaceWith( data );
-							galleryJScrollPane();
 							setTimeout(function () {
+								galleryJScrollPane();
 								resizeBlock();
 							},1000);
 						});
@@ -327,15 +345,33 @@ $(function(){
 	}
 
 	formValidation($('#form .form'));
-	galleryJScrollPane();
 	DataTableUsers();
 	DataTableToys();
 
 	$(window).on('load', function(event) {
+		galleryJScrollPane();
 		resizeBlock();
 	});
 
 
+
+	$("#header .links .nav #main-menu ul li").on('click', function(event) {
+		event.preventDefault();
+		var $el = $("html, body");
+		if( $(this).attr('data') == 1 ){
+			var top = 0;
+			$el.stop().animate({scrollTop: top}, '600', 'swing');
+		}else if( $(this).attr('data') == 2 ){
+			var top = $("#steps").offset().top - 200;
+			$el.stop().animate({scrollTop: top}, '600', 'swing');
+		}else if( $(this).attr('data') == 3 ){
+			var top = $("#form").offset().top - 200;
+			$el.stop().animate({scrollTop: top}, '600', 'swing');
+		}else if( $(this).attr('data') == 4 ){
+			var top = $("#gallery").offset().top - 200;
+			$el.stop().animate({scrollTop: top}, '600', 'swing');
+		}
+	});
 
 
 
@@ -399,7 +435,7 @@ $(function(){
 							message: ' '
 						},
 						stringLength: {
-							min: 6,
+							min: 3,
 							max: 30,
 							message: ' '
 						},
@@ -415,7 +451,7 @@ $(function(){
 							message: ' '
 						},
 						stringLength: {
-							min: 6,
+							min: 3,
 							max: 30,
 							message: ' '
 						},
