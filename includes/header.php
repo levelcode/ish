@@ -10,7 +10,7 @@
   <div class="row">
     <div class="col col-xs-12 col-md-12 col-lg-10 col-lg-offset-1">
       <div class="logo col-xs-3 col-md-3 col-lg-3">
-        <a href="/">
+        <a href="http://www.ishopcolombia.com/">
           <img src="../assets/p2.png" alt="Subasta" title="Subasta">
         </a>
       </div>
@@ -26,9 +26,9 @@
           </div>
           <div class="social-links">
             <ul class="social">
-              <li class="fb"><a href="#facebook"></a></li>
-              <li class="tw"><a href="#twitter"></a></li>
-              <li class="tg"><a href="#instagram"></a></li>
+              <li class="fb"><a href="https://www.facebook.com/iShopColombia/"></a></li>
+              <li class="tw"><a href="https://twitter.com/iShopCol?lang=es"></a></li>
+              <li class="tg"><a href="https://www.instagram.com/ishopcolombia/"></a></li>
             </ul>
           </div>
           <div class="other-logos">
