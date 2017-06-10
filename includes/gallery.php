@@ -34,8 +34,8 @@
         </div>
       <?php endforeach; ?>
 
-      <?php //for($i = 0; $i < 40; $i++): ?>
-      <!-- <div class="item">
+      <?php for($i = 0; $i < 40; $i++): ?>
+      <div class="item">
         <div class="img">
           <img src="../assets/p1.png" alt="imagen1" title="imagen1">
         </div>
@@ -47,8 +47,8 @@
           <span class="price">$500</span>
           <input type="button" value="VOTAR">
         </div>
-      </div> -->
-      <?php //endfor; ?>
+      </div>
+      <?php endfor; ?>
 
     </div>
 

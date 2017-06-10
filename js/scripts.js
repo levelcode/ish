@@ -8,10 +8,9 @@ $(function(){
 	}
 
 	function resizeBlock() {
-		if( $("#gallery").height() < 610 ){
-			$("#main").css("margin-bottom",'160px');
-		}else{
-			$("#main").css("margin-bottom",'');
+		if( $(window).width() > 768 ){
+			var h = $("#gallery").height();
+			$("#main").css("margin-bottom",h*0.92+"px");
 		}
 	}
 
@@ -102,6 +101,7 @@ $(function(){
 				format: 'image/jpeg',
 				quality: 65
 		});
+		dataURL = dataURL.replace(/^data:image\/(png|jpg|jpeg);base64,/, "");
 		return dataURL;
 	}
 
@@ -139,10 +139,6 @@ $(function(){
 							max: 30,
 							message: ' '
 						},
-						regexp: {
-							regexp: /^[a-zA-Z0-9_ \.]+$/,
-							message: 'Error'
-						}
 					}
 				},
 				nameCliente: {
@@ -155,10 +151,6 @@ $(function(){
 							max: 30,
 							message: ' '
 						},
-						regexp: {
-							regexp: /^[a-zA-Z0-9_ \.]+$/,
-							message: 'Error'
-						}
 					}
 				},
 				lastnameClient: {
@@ -171,10 +163,6 @@ $(function(){
 							max: 30,
 							message: ' '
 						},
-						regexp: {
-							regexp: /^[a-zA-Z0-9_ \.]+$/,
-							message: 'Error'
-						}
 					}
 				},
 				identification: {
@@ -225,10 +213,6 @@ $(function(){
 							max: 30,
 							message: ' '
 						},
-						regexp: {
-							regexp: /^[a-zA-Z0-9_ \.]+$/,
-							message: 'Error'
-						}
 					}
 				},
 				nametoy: {
@@ -241,10 +225,6 @@ $(function(){
 							max: 30,
 							message: ' '
 						},
-						regexp: {
-							regexp: /^[a-zA-Z0-9_ \.]+$/,
-							message: 'Error'
-						}
 					}
 				},
 				bill: {
@@ -297,6 +277,12 @@ $(function(){
 					formData.append($(this).attr('name'), getBase64Image($(this).siblings('img')[0]));
 				}
 			});
+			swal({
+				title: 'Cargando..',
+				showCancelButton: false,
+				showConfirmButton: false,
+				showCloseButton: false,
+			});
 			$.ajax({
 			    url: "services/upload-form.php",
 			    type: 'POST',
@@ -305,22 +291,6 @@ $(function(){
 					contentType: false,
 					processData: false,
 					type: 'POST',
-					xhr: function() {  // custom xhr
-						myXhr = $.ajaxSettings.xhr();
-						if(myXhr.upload){
-						 $form.addClass('load');
-						 swal({
-							 title: 'Cargando..',
-							 showCancelButton: false,
-							 showConfirmButton: false,
-							 showCloseButton: false,
-						 });
-							myXhr.upload.addEventListener('progress',function (e) {
-
-							}, false);
-						}
-						return myXhr;
-				 	},
 			    success: function(r) {
 						$.get( "includes/gallery.php", function( data ) {
 							$( "#gallery" ).replaceWith( data );

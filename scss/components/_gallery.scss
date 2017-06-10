@@ -34,7 +34,6 @@
       font-family: 'Bebas Neue';
       line-height: 1;
       display: block;
-      margin-top: -8px;
     }
     &::after{
       content: "";
@@ -53,10 +52,10 @@
     width: 97% !important;
     margin: 0 0% 0 2.4%;
     overflow: hidden;
-    max-height: 865px;
+    max-height: 100%;
     padding-right: 0% !important;
     @include desktop-normal{
-      max-height: 880px;
+      max-height: 100%;
     }
     @include mobile{
       max-height: 100%;

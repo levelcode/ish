@@ -58,8 +58,6 @@
       mkdir($dir, 0755);
     }
     $fileName = $dir."/".$name;
-    $base64 = str_replace(' ','+',$base64);
-    $base64 = preg_replace('/^data:image\/(png|jpg|jpeg);base64,/', "", $base64);
     $toy = base64_decode($base64);
     file_put_contents($fileName, $toy);
     return $fileName;
