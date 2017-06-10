@@ -45,6 +45,11 @@ ul, li{
     color: white !important;
     border: none !important;
   }
+  td{
+    img{
+      max-width: 148px;
+    }
+  }
   table{
     width: 100%;
     border-bottom: 1px solid transparent !important;
@@ -76,15 +81,23 @@ ul, li{
   }
   tbody{
     tr{
+      td{
+        border-left: 1px solid black;
+        &:last-child{
+          border-radius: 0px 0px 10px 0px;
+        }
+        &:first-child{
+          border-radius: 0px 0px 0px 10px;
+          border-left: 1px solid transparent;
+        }
+      }
       &:last-child{
         td{
-          border-left: 1px solid black;
           &:last-child{
             border-radius: 0px 0px 10px 0px;
           }
           &:first-child{
             border-radius: 0px 0px 0px 10px;
-            border-left: 1px solid transparent;
           }
         }
       }

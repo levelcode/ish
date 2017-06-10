@@ -25,6 +25,7 @@ var vendorDependencies = [
   bowerFolder + 'jScrollPane/script/jquery.jscrollpane.min.js',
   bowerFolder + 'sweetalert2/dist/sweetalert2.min.js',
   bowerFolder + 'datatables.net/js/jquery.dataTables.min.js',
+  nodemodules + 'fancybox/dist/js/jquery.fancybox.js',
   nodemodules + 'formvalidation/dist/js/formValidation.min.js',
   nodemodules + 'formvalidation/dist/js/framework/bootstrap.min.js',
 ];
@@ -58,9 +59,9 @@ gulp.task('compile-js', function(cb) {
     gulp.src('js/scripts.js'),
     rename('scripts.min.js'),
     uglify(),
-    // javascriptObfuscator({
-    //   compact:true
-    // }),
+    javascriptObfuscator({
+      compact:true
+    }),
     gulp.dest('./js/'),
   ], cb);
 });

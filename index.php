@@ -32,8 +32,7 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
     <script src="js/vendors.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <!-- <script src="js/scripts.min.js"></script>-->
+    <script src="js/scripts.min.js"></script>
 
   </body>
 </html>

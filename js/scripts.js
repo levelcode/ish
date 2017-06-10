@@ -1,5 +1,7 @@
 $(function(){
 
+	$('.fancybox').fancybox();
+
 	function DataTableUsers() {
 		$('#users-table').DataTable();
 	}
@@ -10,7 +12,11 @@ $(function(){
 	function resizeBlock() {
 		if( $(window).width() > 768 ){
 			var h = $("#gallery").height();
-			$("#main").css("margin-bottom",h*0.92+"px");
+			if( h < 600 ){
+				$("#main").css("margin-bottom","130px");
+			}else{
+				$("#main").css("margin-bottom",h*0.92+"px");
+			}
 		}
 	}
 
@@ -324,6 +330,7 @@ $(function(){
 	formValidation($('#form .form'));
 	DataTableUsers();
 	DataTableToys();
+	resizeBlock();
 
 	$(window).on('load', function(event) {
 		galleryJScrollPane();

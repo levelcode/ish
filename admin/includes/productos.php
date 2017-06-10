@@ -22,8 +22,8 @@
       <?php foreach ($products as $key => $value): ?>
         <tr data="<?php print $value['Estado']; ?>">
           <td><?php print $value['Nombre_del_juguete']; ?></td>
-          <td><?php print $value['Imagen_factura']; ?></td>
-          <td><?php print $value['Imagen_juguete']; ?></td>
+          <td><a class="fancybox" href="<?php print "//lasubastadepapa.com".$value['Imagen_factura']; ?>"><img src="<?php print "//lasubastadepapa.com".$value['Imagen_factura']; ?>" alt=""></a></td>
+          <td><a class="fancybox" href="<?php print "//lasubastadepapa.com".$value['Imagen_juguete']; ?>"><img src="<?php print "//lasubastadepapa.com".$value['Imagen_juguete']; ?>" alt=""></a></td>
           <td class="state"><?php print ($value['Estado'] == 1)?'Activo':'Inactivo'; ?></td>
           <td><?php print $value['Nombre_cliente']; ?></td>
           <td><?php print $value['Apellido_cliente']; ?></td>
