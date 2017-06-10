@@ -25,13 +25,31 @@
   <body class="login">
 
     <div class="logo">
-      <img src="../assets/logo_subasta.png" alt="logo" title="logo">
+      <img src="../assets/fb/logo.png" alt="logo" title="logo">
+    </div>
+    <div class="dsc">
+      <p><strong>Estás a punto de darle a papá <br />los juguetes que siempre ha querido.</strong>
+        <span>Conéctate a Facebook para empezar.</span>
+      </p>
     </div>
     <div class="login">
-      <a href="<?php print htmlspecialchars($loginUrl) ?>"><img src="../assets/facebook.png" alt="">Iniciar con Facebook</a>
+      <a href="<?php print htmlspecialchars($loginUrl) ?>">
+        <img src="../assets/fb/boton.png" alt="">
+      </a>
     </div>
 
-    <?php include "../includes/footer.php" ?>
+    <div class="footerlogin">
+      <div class="logo1">
+        <img src="../assets/fb/logo_ishop.png" alt="">
+      </div>
+      <div class="social">
+        <img src="../assets/fb/copy.png" alt="">
+        <ul>
+          <li class="fb"></li>
+          <li class="tw"></li>
+        </ul>
+      </div>
+    </div>
 
   </body>
 </html>

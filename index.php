@@ -1,8 +1,8 @@
 <?php
-  // session_start();
-  // if( !isset($_SESSION['fb_user']) ){
-  //   header('Location: /services/login.php');
-  // }
+  session_start();
+  if( !isset($_SESSION['fb_user']) ){
+    header('Location: /services/login.php');
+  }
 ?>
 <!DOCTYPE html>
 <html lang="es">
