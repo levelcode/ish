@@ -393,6 +393,13 @@ ul, li{
     img{
       width: 100%;
     }
+    @include mobile{
+      text-align: center;
+      margin: 8% auto 2%;
+      img{
+        width: 40%;
+      }
+    }
   }
   &.loginuser{
     .logo{
@@ -439,12 +446,15 @@ ul, li{
     color: white;
     max-width: 550px;
     margin: 0 auto;
+    @include mobile{
+      width: 94%;
+    }
     strong{
       font-size: 32px;
       font-family: 'Roboto';
       line-height: 1;
       @include mobile{
-        font-size: 28px;
+        font-size: 24px;
       }
     }
     span{
@@ -453,7 +463,7 @@ ul, li{
       margin-top: 10px;
       margin-bottom: 20px;
       @include mobile{
-        font-size: 20px;
+        font-size: 17px;
       }
     }
   }
