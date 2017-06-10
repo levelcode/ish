@@ -9,8 +9,8 @@
   <div class="row">
 
     <div class="title">
-      <h4>galería de juguetes</h4>
-      <span>para subasta</span>
+      <h4>Galería de Juguetes</h4>
+      <span>Obtén la mayor cantidad de puntos para ganar  la subasta</span>
     </div>
 
     <div class="grid">

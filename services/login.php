@@ -40,14 +40,14 @@
 
     <div class="footerlogin">
       <div class="logo1">
-        <img src="../assets/fb/logo_ishop.png" alt="">
+        <a href="http://www.ishopcolombia.com/"><img src="../assets/fb/logo_ishop.png" alt=""></a>
       </div>
       <div class="social">
         <img src="../assets/fb/logo_campana.png" alt="">
         <ul>
-          <li class="fb"><img src="../assets/fb/facebook.png" alt="fb"></li>
-          <li class="tw"><img src="../assets/fb/twitter.png" alt="tw"></li>
-          <li class="tw"><img src="../assets/fb/instagram.png" alt="ins"></li>
+          <li class="fb"><a href="https://www.facebook.com/iShopColombia/"><img src="../assets/fb/facebook.png" alt="fb"></a></li>
+          <li class="tw"><a href="https://twitter.com/iShopCol?lang=es"><img src="../assets/fb/twitter.png" alt="tw"></a></li>
+          <li class="tw"><a href="https://www.instagram.com/ishopcolombia/"><img src="../assets/fb/instagram.png" alt="ins"></a></li>
         </ul>
       </div>
     </div>
