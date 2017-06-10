@@ -40,35 +40,43 @@ $(function(){
 			var _this = $(this);
 			var formData = new FormData();
 			var id = _this.attr('data');
-			var vote = _this.siblings('.price').text();
-			vote = parseInt(vote);
-			formData.append('id', id);
-			formData.append('vote', vote);
-			$.ajax({
-					url: "/services/vote.php",
-					type: 'POST',
-					data: formData,
-					cache: false,
-					contentType: false,
-					processData: false,
-					type: 'POST',
-					success: function(r) {
-						if( r != true ){
-							swal({
-								text: 'Error',
-								type: 'error',
-								confirmButtonColor: '#fb8f22',
-							});
-						}else{
-							_this.siblings('.price').text((vote+100)+' puntos');
-							swal({
-								text: 'Gracias por votar',
-								type: 'success',
-								confirmButtonColor: '#fb8f22',
-							});
+			if( id == "openmodal" ){
+				$(".rememeber").fadeIn(300).children().on('click', function(event) {
+					event.preventDefault();
+					$(this).parent().fadeOut(300);
+				});
+			}else{
+				var vote = _this.siblings('.price').text();
+				vote = parseInt(vote);
+				formData.append('id', id);
+				formData.append('vote', vote);
+				$.ajax({
+						url: "/services/vote.php",
+						type: 'POST',
+						data: formData,
+						cache: false,
+						contentType: false,
+						processData: false,
+						type: 'POST',
+						success: function(r) {
+							if( r != true ){
+								swal({
+									text: 'Error',
+									type: 'error',
+									confirmButtonColor: '#fb8f22',
+								});
+							}else{
+								_this.siblings('.price').text((vote+100)+' puntos');
+								swal({
+									text: 'Gracias por votar',
+									type: 'success',
+									confirmButtonColor: '#fb8f22',
+								});
+							}
 						}
-					}
-			});
+				});
+			}
+
 		});
 	}
 
@@ -262,6 +270,13 @@ $(function(){
 								type: 'image/jpeg,image/png',
 								maxSize: 2097152,   // 2048 * 1024
 								message: 'The selected file is not valid'
+						}
+					}
+				},
+				terms: {
+					validators: {
+						notEmpty: {
+								message: ' '
 						}
 					}
 				}

@@ -24,7 +24,7 @@
         <div class="name-toy last input-field form-group">
           <input class="form-control" type="text" name="nametoy" placeholder="Nombre del juguete">
         </div>
-        
+
         <div class="bill field form-group">
           <label>Sube aquí la foto de su FACTURA</label>
           <input type="file" name="bill" class="file form-control">
@@ -40,8 +40,8 @@
           <input type="button" class="btn" value="SUBIR FOTO">
           <img>
         </div>
-        <div class="form-group">
-          <span>Acepto <a href="terms.pdf" target="_blank" style="color:white">Términos y Condiciones </a><input type="checkbox" name="check" id="check"></span><br>
+        <div class="form-group term">
+          <span>Acepto <a href="terms.pdf" target="_blank">Términos y Condiciones </a><input name="terms" type="checkbox" name="check" id="check"></span><br>
         </div>
         <input class="btn-sb" type="submit" name="send" value="ENTRAR">
       </form>

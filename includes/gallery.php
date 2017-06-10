@@ -25,9 +25,11 @@
           </div>
           <div class="description">
             <span class="price"><?php print empty($value['Puntos'])?'0':$value['Puntos'] ?> puntos</span>
-            <?php //if( date("F j, Y, g:i a") == 'June 27, 2017, 1:00 am' ): ?>
+            <?php if( date("F j, Y, g:i a") == 'June 27, 2017, 1:00 am' ): ?>
               <input type="button" data="<?php print $value['id'] ?>" class="vote" value="VOTAR">
-            <?php //endif; ?>
+            <?php else: ?>
+              <input type="button" data="openmodal" class="vote" value="VOTAR">
+            <?php endif; ?>
           </div>
         </div>
       <?php endforeach; ?>
