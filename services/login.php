@@ -33,7 +33,7 @@
     <meta property="og:url" content='https://lasubastadepapa.com?fb=true' />
     <link rel="stylesheet" href="../css/styles.min.css">
   </head>
-  <body class="login" sytle="width: 440px; margin: 0 auto;">
+  <body class="login" style="width: 440px; margin: 0 auto;">
 
     <div class="logo">
       <img src="../assets/fb/logo.png" alt="logo" title="logo">
