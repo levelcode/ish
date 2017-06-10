@@ -2,7 +2,7 @@
   <div class="row">
     <div class="form col-xs-12 col-md-6 col-lg-6">
       <form>
-        <h5>REGISTRE SU FACTURA</h5>
+        <h5>REGISTRA TU FACTURA</h5>
         <div class="name-dad input-field form-group">
           <input class="form-control" type="text" name="nameCliente" placeholder="Nombre del cliente">
         </div>
@@ -26,7 +26,7 @@
         </div>
 
         <div class="bill field form-group">
-          <label>Sube aquí la foto de su FACTURA</label>
+          <label>Sube aquí la foto de tu FACTURA</label>
           <input type="file" name="bill" class="file form-control">
           <input type="button" class="btn" value="SUBIR FOTO">
           <img>
@@ -48,7 +48,7 @@
     </div>
     <div class="img col-xs-12 col-md-6 col-lg-6">
       <div>
-        <img src="../assets/juguetes_form.png" alt="fotm" title="form">
+        <a href="http://www.ishopcolombia.com/"><img src="../assets/juguetes_form.png" alt="fotm" title="form"></a>
       </div>
     </div>
   </div>

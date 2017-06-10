@@ -12,14 +12,16 @@
         <img src="../assets/juguetes_banner.png" alt="banner" title="banner">
       </div>
       <div class="title">
-        <h5>Renuévale</h5>
-        <h3>los juguetes</h3>
-        <h4> a papá</h4>
+        <h5>RENUÉVALE</h5>
+        <h3>LOS JUGUETES</h3>
+        <h4>A PAPÁ</h4>
       </div>
-      <div class="description">
-        <p>Participa y gana una “Juguetería completa para papá”. </p>
-        <p>Son 10 millones de pesos en productos apple y accesorios:</p>
-        <p><strong>Mac book Air 13”, un iPad, 1 Apple watch, un parlante Marshall, audífonos Beats, apple tv, iPhone 7 (32GB).</strong></p>
+      <div class="description" style="width: 270px;">
+        <p>Compra el regalo de papá en iShop <br>
+        y por tus compras de $1´000.000 o más,<br>
+        participa y gana <b>una Juguetería completa para papá</b>,<br>
+        que incluye:</p>
+        <p><strong style="font-size: 20px;">iPhone 7, MacBook Air, Apple TV, Audífonos Beats y iPad</strong></p>
       </div>
 
     </div>
