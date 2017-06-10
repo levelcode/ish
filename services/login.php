@@ -33,14 +33,14 @@
     <meta property="og:url" content='https://lasubastadepapa.com?fb=true' />
     <link rel="stylesheet" href="../css/styles.min.css">
   </head>
-  <body class="login">
+  <body class="login" sytle="width: 440px; margin: 0 auto;">
 
     <div class="logo">
       <img src="../assets/fb/logo.png" alt="logo" title="logo">
     </div>
     <div class="dsc">
       <p><strong>Estás a punto de darle a papá <br />los juguetes que siempre ha querido.</strong>
-        <span>Conéctate a Facebook para empezar.</span>
+        <span style="font-family: sans-serif;">Conéctate a Facebook para empezar.</span>
       </p>
     </div>
     <div class="login">
