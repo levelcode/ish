@@ -62,7 +62,7 @@
       max-width: 600px;
       min-height: 455px;
       overflow: hidden;
-      @include mobile{
+      @include desktop-normal-xs{
         margin: 0 auto;
         width: 100%;
       }
@@ -228,6 +228,9 @@
     }
   }
   .img{
+    @include desktop-normal-xs {
+      display: none;
+    }
     @include mobile{
       text-align: center;
     }

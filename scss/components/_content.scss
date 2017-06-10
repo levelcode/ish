@@ -292,13 +292,13 @@ ul, li{
     padding-right: 0;
   }
   @include mobile{
-    margin-bottom: 500px;
+    margin-bottom: 0;
   }
   @include mobile-full{
-    margin-bottom: 470px;
+    margin-bottom: 0;
   }
   @include mobile-sm{
-    margin-bottom: 500px;
+    margin-bottom: 200px;
   }
   .main{
     background: $gray-bg-main url("../../assets/focus-main.png") no-repeat;
@@ -306,6 +306,9 @@ ul, li{
     position: relative;
     z-index: 1;
     padding-bottom: 470px;
+    @include mobile{
+      padding-bottom: 100px;
+    }
   }
 }
 

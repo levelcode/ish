@@ -3,6 +3,9 @@
   left: 0;
   right: 0;
   margin: 0 auto;
+  @include mobile{
+    position: relative;
+  }
   .row >.title{
     text-align: center;
     text-transform: uppercase;
