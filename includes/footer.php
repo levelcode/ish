@@ -5,7 +5,7 @@
         <strong>La Subasta de Papá</strong> 2017
       </div>
       <div class="img col-xs-3 col-md-3 col-lg-3">
-        <a href="#">
+        <a href="http://www.ishopcolombia.com/">
           <img src="../assets/logo_ishop.png" alt="Ishop" title="Ishop">
         </a>
       </div>
