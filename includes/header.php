@@ -11,7 +11,7 @@
     <div class="col col-xs-12 col-md-12 col-lg-10 col-lg-offset-1">
       <div class="logo col-xs-3 col-md-3 col-lg-3">
         <a href="/">
-          <img src="../assets/logo_subasta.png" alt="Subasta" title="Subasta">
+          <img src="../assets/p2.png" alt="Subasta" title="Subasta">
         </a>
       </div>
       <div class="links col-xs-9 col-md-9 col-lg-9">
@@ -33,7 +33,6 @@
           </div>
           <div class="other-logos">
             <ul class="logos">
-              <li class="lg2"><img src="../assets/ishop2.png" alt="logo2" title="logo2"></li>
               <li class="lg1"><img src="../assets/logoadicional1.png" alt="logo1" title="logo1"></li>
             </ul>
           </div>

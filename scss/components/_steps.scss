@@ -58,9 +58,19 @@
     width: 78%;
     text-align: right;
     margin: 30px auto 0;
+    a{
+      padding: 6px 8px;
+      text-align: center;
+      border-radius: 10px;
+      background-image: -moz-linear-gradient( -90deg, rgb(251,143,34) 0%, rgb(236,74,13) 100%);
+      background-image: -webkit-linear-gradient( -90deg, rgb(251,143,34) 0%, rgb(236,74,13) 100%);
+      background-image: -ms-linear-gradient( -90deg, rgb(251,143,34) 0%, rgb(236,74,13) 100%);
+      box-shadow: 0px 0px 2.94px 0.06px rgba(129, 129, 129, 0.8);
+      cursor: pointer;
+    }
     &,a{
       font-size: 14px;
-      color: #fb8f22;
+      color: white;
     }
     @include mobile{
       width: 100%;
