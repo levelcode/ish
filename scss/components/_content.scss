@@ -156,13 +156,13 @@ ul, li{
     }
   }
   .img{
+    @include mobile-full{
+      text-align: center;
+    }
     img{
       width: 68%;
       @include mobile{
         width: 54%;
-      }
-      @include mobile-full{
-        display: none;
       }
     }
   }
@@ -343,6 +343,32 @@ ul, li{
   background: url("/assets/fb/fondo.jpg") no-repeat;
   background-size: cover;
   background-position: center;
+  text-align: center;
+  .footerlogin{
+    margin-top:8%;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    .logo1{
+      float: left;
+      position: relative;
+      top: 40px;
+    }
+    .social{
+      float: right;
+      ul{
+        padding: 10px 0;
+        li{
+          display: inline-block;
+          margin:  0 10px;
+        }
+      }
+    }
+  }
   &::before{
     display: none;
   }

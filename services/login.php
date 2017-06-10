@@ -43,10 +43,11 @@
         <img src="../assets/fb/logo_ishop.png" alt="">
       </div>
       <div class="social">
-        <img src="../assets/fb/copy.png" alt="">
+        <img src="../assets/fb/logo_campana.png" alt="">
         <ul>
-          <li class="fb"></li>
-          <li class="tw"></li>
+          <li class="fb"><img src="../assets/fb/facebook.png" alt="fb"></li>
+          <li class="tw"><img src="../assets/fb/twitter.png" alt="tw"></li>
+          <li class="tw"><img src="../assets/fb/instagram.png" alt="ins"></li>
         </ul>
       </div>
     </div>
