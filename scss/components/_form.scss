@@ -59,7 +59,7 @@
       box-shadow: 0px 0px 9.5px 0.5px rgba(129, 129, 129, 0.5);
       padding: 10px;
       box-sizing: border-box;
-      width: 600px;
+      max-width: 600px;
       min-height: 455px;
       overflow: hidden;
       @include mobile{
@@ -146,6 +146,7 @@
         color: white;
         position: relative;
         top: -10px;
+        clear: both;
         .form-control-feedback{
           right: -33px;
           top: -8px;
