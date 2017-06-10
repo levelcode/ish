@@ -41,7 +41,7 @@
           <img>
         </div>
         <div class="form-group term">
-          <span>Acepto <a href="terms.pdf" target="_blank">Términos y Condiciones </a><input name="terms" type="checkbox" name="check" id="check"></span><br>
+          <span><input name="terms" type="checkbox" name="check" id="check"> He leído y estoy de acuerdo con los <a href="terms.pdf" target="_blank"><strong>Términos y Condiciones</strong></a></span><br>
         </div>
         <input class="btn-sb" type="submit" name="send" value="ENTRAR">
       </form>
