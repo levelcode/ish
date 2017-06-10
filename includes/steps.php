@@ -25,7 +25,7 @@
         <li>
           <img src="../assets/Elipse_4.png" alt="">
           <p>recuerda que cada voto</p>
-          <span>equivale a $100 pesos en tu subasta</span>
+          <span>equivale a 100 puntos en tu subasta</span>
         </li>
         <li>
           <img src="../assets/Elipse_5.png" alt="">

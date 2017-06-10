@@ -133,7 +133,7 @@ $(function(){
 							message: ' '
 						},
 						regexp: {
-							regexp: /^[a-zA-Z0-9_\.]+$/,
+							regexp: /^[a-zA-Z0-9_ \.]+$/,
 							message: 'Error'
 						}
 					}
@@ -149,7 +149,7 @@ $(function(){
 							message: ' '
 						},
 						regexp: {
-							regexp: /^[a-zA-Z0-9_\.]+$/,
+							regexp: /^[a-zA-Z0-9_ \.]+$/,
 							message: 'Error'
 						}
 					}
@@ -165,7 +165,7 @@ $(function(){
 							message: ' '
 						},
 						regexp: {
-							regexp: /^[a-zA-Z0-9_\.]+$/,
+							regexp: /^[a-zA-Z0-9_ \.]+$/,
 							message: 'Error'
 						}
 					}
@@ -181,7 +181,7 @@ $(function(){
 							message: ' '
 						},
 						regexp: {
-							regexp: /^[a-zA-Z0-9_\.]+$/,
+							regexp: /^[a-zA-Z0-9_ \.]+$/,
 							message: 'Error'
 						}
 					}
@@ -197,7 +197,7 @@ $(function(){
 							message: ' '
 						},
 						regexp: {
-							regexp: /^[a-zA-Z0-9_\.]+$/,
+							regexp: /^[0-9_ \.]+$/,
 							message: 'Error'
 						}
 					}
@@ -206,6 +206,10 @@ $(function(){
 					validators: {
 						notEmpty: {
 							message: ' '
+						},
+						regexp: {
+							regexp: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+							message: 'Error'
 						},
 						stringLength: {
 							min: 3,
@@ -225,7 +229,7 @@ $(function(){
 							message: ' '
 						},
 						regexp: {
-							regexp: /^[a-zA-Z0-9_\.]+$/,
+							regexp: /^[a-zA-Z0-9_ \.]+$/,
 							message: 'Error'
 						}
 					}
@@ -241,7 +245,7 @@ $(function(){
 							message: ' '
 						},
 						regexp: {
-							regexp: /^[a-zA-Z0-9_\.]+$/,
+							regexp: /^[a-zA-Z0-9_ \.]+$/,
 							message: 'Error'
 						}
 					}
@@ -325,7 +329,7 @@ $(function(){
 						$form.removeClass('load');
 						swal({
 						  title: 'Felicitaciones',
-						  text: 'Se ha guardado tu informacion correctamente',
+						  text: 'Tu juguete se ha publicado exitosamente!',
 							type: 'success',
 							confirmButtonColor: '#fb8f22',
 						});
