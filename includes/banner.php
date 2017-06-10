@@ -1,3 +1,19 @@
+<div class="rememeber" style="position: fixed;
+    z-index: 100000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.47);
+    top: 0;
+    display:none;">
+  <div class="remember-img" style="position: absolute;
+    left: calc(50% - 226px);
+    top: calc(50% - 110px);
+    border: solid 9px rgba(255, 255, 255, 0.49);
+    border-radius: 11px;">
+    <img src="../assets/remember.jpg">
+  </div>
+</div>
+
 <div class="banner container">
   <div class="row">
     <div class="col col-xs-12 col-md-12 col-lg-9 col-lg-offset-2">

@@ -132,7 +132,7 @@ $(function(){
 							message: ' '
 						},
 						regexp: {
-							regexp: /^[a-zA-Z0-9_\.]+$/,
+							regexp: /^[a-zA-Z0-9_ \.]+$/,
 							message: 'Error'
 						}
 					}
@@ -148,7 +148,7 @@ $(function(){
 							message: ' '
 						},
 						regexp: {
-							regexp: /^[a-zA-Z0-9_\.]+$/,
+							regexp: /^[a-zA-Z0-9_ \.]+$/,
 							message: 'Error'
 						}
 					}
@@ -164,7 +164,7 @@ $(function(){
 							message: ' '
 						},
 						regexp: {
-							regexp: /^[a-zA-Z0-9_\.]+$/,
+							regexp: /^[a-zA-Z0-9_ \.]+$/,
 							message: 'Error'
 						}
 					}
@@ -185,14 +185,9 @@ $(function(){
 						notEmpty: {
 							message: ' '
 						},
-						stringLength: {
-							min: 3,
-							max: 30,
-							message: ' '
-						},
-						regexp: {
-							regexp: /^[a-zA-Z0-9_\.]+$/,
-							message: 'Error'
+						numeric: {
+							message: ' ',
+							thousandsSeparator: '',
 						}
 					}
 				},
@@ -201,15 +196,15 @@ $(function(){
 						notEmpty: {
 							message: ' '
 						},
+						regexp: {
+							regexp: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+							message: 'Error'
+						},
 						stringLength: {
 							min: 3,
 							max: 30,
 							message: ' '
 						},
-						regexp: {
-							regexp: /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-							message: 'Error'
-						}
 					}
 				},
 				country: {
@@ -223,7 +218,7 @@ $(function(){
 							message: ' '
 						},
 						regexp: {
-							regexp: /^[a-zA-Z0-9_\.]+$/,
+							regexp: /^[a-zA-Z0-9_ \.]+$/,
 							message: 'Error'
 						}
 					}
@@ -239,12 +234,11 @@ $(function(){
 							message: ' '
 						},
 						regexp: {
-							regexp: /^[a-zA-Z0-9_\.]+$/,
+							regexp: /^[a-zA-Z0-9_ \.]+$/,
 							message: 'Error'
 						}
 					}
 				},
-
 				bill: {
 					validators: {
 						notEmpty: {
@@ -323,7 +317,7 @@ $(function(){
 						$form.removeClass('load');
 						swal({
 						  title: 'Felicitaciones',
-						  text: 'Se ha guardado tu informacion correctamente',
+						  text: 'Tu juguete se ha publicado exitosamente!',
 							type: 'success',
 							confirmButtonColor: '#fb8f22',
 						});

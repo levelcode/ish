@@ -17,8 +17,7 @@
 
       <?php foreach ($products as $key => $value): ?>
         <div class="item">
-          <div class="img">
-            <img src="<?php print $value['Imagen_juguete'] ?>" alt="imagen1" title="imagen1">
+          <div class="img popup" data-img="<?php print $value['Imagen_juguete'] ?>" style="background-image: url(<?php print $value['Imagen_juguete'] ?>); height: 200px; background-size: cover;  background-position: center;">
           </div>
           <div class="title">
             <span><?php print $value['Nombre_cliente']." ".$value['Apellido_cliente'] ?></span>

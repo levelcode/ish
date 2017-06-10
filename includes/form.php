@@ -10,10 +10,10 @@
           <input class="form-control" type="text" name="lastnameClient" placeholder="Apellido del cliente">
         </div>
         <div class="name-toy input-field form-group">
-          <input class="form-control" type="text" name="identification" placeholder="Identificacion">
+          <input class="form-control" type="text" name="identification" placeholder="Identificación">
         </div>
         <div class="name-toy input-field form-group">
-          <input class="form-control" type="text" name="phone" placeholder="Telefono">
+          <input class="form-control" type="text" name="phone" placeholder="Teléfono">
         </div>
         <div class="name-toy input-field form-group">
           <input class="form-control" type="text" name="mail" placeholder="E-mail">
@@ -24,6 +24,7 @@
         <div class="name-toy last input-field form-group">
           <input class="form-control" type="text" name="nametoy" placeholder="Nombre del juguete">
         </div>
+        
         <div class="bill field form-group">
           <label>Sube aquí la foto de su FACTURA</label>
           <input type="file" name="bill" class="file form-control">
@@ -38,6 +39,9 @@
           <input type="file" name="toy" class="file form-control">
           <input type="button" class="btn" value="SUBIR FOTO">
           <img>
+        </div>
+        <div class="form-group">
+          <span>Acepto <a href="terms.pdf" target="_blank" style="color:white">Términos y Condiciones </a><input type="checkbox" name="check" id="check"></span><br>
         </div>
         <input class="btn-sb" type="submit" name="send" value="ENTRAR">
       </form>
