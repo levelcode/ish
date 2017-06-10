@@ -53,7 +53,6 @@ $(function(){
 					processData: false,
 					type: 'POST',
 					success: function(r) {
-						console.log(r);
 						if( r != true ){
 							swal({
 								text: 'Error',
@@ -175,14 +174,9 @@ $(function(){
 						notEmpty: {
 							message: ' '
 						},
-						stringLength: {
-							min: 3,
-							max: 30,
-							message: ' '
-						},
-						regexp: {
-							regexp: /^[a-zA-Z0-9_\.]+$/,
-							message: 'Error'
+						numeric: {
+							message: ' ',
+							thousandsSeparator: '',
 						}
 					}
 				},
@@ -212,6 +206,10 @@ $(function(){
 							max: 30,
 							message: ' '
 						},
+						regexp: {
+							regexp: /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+							message: 'Error'
+						}
 					}
 				},
 				country: {
