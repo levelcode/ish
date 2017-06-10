@@ -15,7 +15,7 @@
         <li>
           <img src="../assets/Elipse_2.png" alt="">
           <p>ESPERA LA VALIDACIÓN</p>
-          <span>de tu facture en nuestro sistema</span>
+          <span>de tu factura en nuestro sistema</span>
         </li>
         <li>
           <img src="../assets/Elipse_3.png" alt="">
