@@ -19,7 +19,18 @@
     <title>La subasta de papá</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LA SUBASTA DE PAPÁ - iShop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <meta property="fb:app_id" content="1320185844755160" />
+    <meta property="og:title" content="LA SUBASTA DE PAPÁ - iShop" />
+    <meta property="og:description" content="Compra el regalo de papá en iShop y por tus compras de $1´000.000 o más, participa y gana una Juguetería completa para papá, que incluye: iPhone 7, MacBook Air, Apple TV, Audífonos Beats y iPad" />
+    <meta property="og:image:secure_url" content='https://lasubastadepapa.com/assets/share_fb.jpg' />
+    <meta property="og:image" content='https://lasubastadepapa.com/assets/share_fb.jpg' />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="1024" />      
+    <meta property="og:url" content='https://lasubastadepapa.com?fb=true' />
     <link rel="stylesheet" href="../css/styles.min.css">
   </head>
   <body class="login">
@@ -38,7 +49,7 @@
       </a>
     </div>
 
-    <div class="footerlogin">
+    <div class="footerlogin" style="z-index:-1;">
       <div class="logo1">
         <a href="http://www.ishopcolombia.com/"><img src="../assets/fb/logo_ishop.png" alt=""></a>
       </div>
