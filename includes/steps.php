@@ -31,13 +31,12 @@
           <img src="../assets/Elipse_5.png" alt="">
           <p>EL JUGUETE MÁS VOTADO</p>
           <span>ganará la juguetería para papá</span>
-          <a class="instruc_terms" href="terms.pfd">Ver Términos y Condiciones</a>
         </li>
 
       </ul>
 
     </div>
-    <div class="terms"><a href="#">Ver términos y condiciones</a></div>
+    <div class="terms"><a href="terms.pdf">Ver términos y condiciones</a></div>
     <div class="time">
       <p>Tienes hasta el <strong>27 de Junio</strong> para registrar tu factura. Fecha de votaciones del <strong>28 al 30 de Junio</strong>.</p>
     </div>
