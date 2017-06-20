@@ -324,6 +324,21 @@ $(function(){
 						$form.find(".btn-sb").prop('disabled', false).removeClass('disabled');
 						$form.data('formValidation').destroy();
 						formValidation($form);
+
+
+						$.ajax({
+								url: "services/log.php",
+								type: 'POST',
+								data: formData,
+								cache: false,
+								contentType: false,
+								processData: false,
+								type: 'POST',
+								success: function(r) {
+
+								}
+						});
+
 			    }
 			});
 		});
