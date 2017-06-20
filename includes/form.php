@@ -31,9 +31,9 @@
           <input type="button" class="btn" value="SUBIR FOTO">
           <img>
         </div>
-        <?php //if(isset($_SESSION['fb_user'])): ?>
-          <input type="hidden" class="form-control" name="data" value="12312312312312312312sss">
-        <?php //endif; ?>
+        <?php if(isset($_SESSION['fb_user'])): ?>
+          <input type="hidden" class="form-control" name="data" value="<?php print $_SESSION['fb_user']['id'] ?>">
+        <?php endif; ?>
         <div class="toy field form-group">
           <label>Sube aquí la foto de el JUGUETE</label>
           <input type="file" name="toy" class="file form-control">
