@@ -70,7 +70,7 @@
   $url_toy = save_image($toy,'toy');
   $url_toy_thumbnail = $_SERVER['DOCUMENT_ROOT']."/files/toy_thumbnail_".generateRandomString(4).".jpg";
   $url_bill = save_image($bill,'bill');
-  image_resize($url_toy, $url_toy_thumbnail, 300, 300);
+  // image_resize($url_toy, $url_toy_thumbnail, 300, 300);
 
   $mysql = new MySQL();
 
@@ -95,5 +95,17 @@
   $save = $mysql->boolean($query);
 
   echo json_encode($save);
+
+  $data = array(
+    "url_bill" => $url_bill,
+    "url_toy" => $url_toy,
+    "user_id" => $id[0]['id'],
+    "fb_id" => $iduserFB,
+    "toy_name" => $_POST['nametoy'],
+  );
+
+  $query = "INSERT INTO `log` ( `id`, `data`, `user` ) VALUES ( null, '".json_encode($data)."', ".$id[0]['id']." )";
+  $save = $mysql->boolean($query);
+
 
 ?>

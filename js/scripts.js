@@ -326,18 +326,18 @@ $(function(){
 						formValidation($form);
 
 
-						$.ajax({
-								url: "services/log.php",
-								type: 'POST',
-								data: formData,
-								cache: false,
-								contentType: false,
-								processData: false,
-								type: 'POST',
-								success: function(r) {
-
-								}
-						});
+						// $.ajax({
+						// 		url: "services/log.php",
+						// 		type: 'POST',
+						// 		data: formData,
+						// 		cache: false,
+						// 		contentType: false,
+						// 		processData: false,
+						// 		type: 'POST',
+						// 		success: function(r) {
+						//
+						// 		}
+						// });
 
 			    }
 			});
