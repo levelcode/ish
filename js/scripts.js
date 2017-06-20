@@ -97,16 +97,18 @@ $(function(){
 
 	function getBase64Image(img) {
 		var canvas = document.createElement("canvas");
-		var w = img.naturalWidth;
-		var h = img.naturalHeight;
+		var scale = 1;
+		if( $(window).width() < 768 ){
+			scale = 1.25;
+		}
+		var w = img.naturalWidth / scale;
+		var h = img.naturalHeight / scale;
+
 		canvas.width = w;
 		canvas.height = h;
 		var ctx = canvas.getContext("2d");
 		ctx.drawImage(img, 0, 0, w, h);
-		var dataURL = canvas.toDataURL({
-				format: 'image/jpeg',
-				quality: 65
-		});
+		var dataURL = canvas.toDataURL("image/jpeg", 0.98);
 		dataURL = dataURL.replace(/^data:image\/(png|jpg|jpeg);base64,/, "");
 		return dataURL;
 	}

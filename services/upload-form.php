@@ -52,7 +52,7 @@
   // }
   */
   function save_image($base64,$pre){
-    $name = $pre."_".generateRandomString(8).".jpg";
+    $name = $pre."_".generateRandomString(4).".jpg";
     $dir = $_SERVER['DOCUMENT_ROOT']."/files";
     if( !is_dir($dir) ){
       mkdir($dir, 0755);
@@ -68,15 +68,15 @@
   $iduserFB = $_POST['data'];
 
   $url_toy = save_image($toy,'toy');
-  $url_toy_thumbnail = $_SERVER['DOCUMENT_ROOT']."/files/toy_thumbnail_".generateRandomString(8).".jpg";
+  $url_toy_thumbnail = $_SERVER['DOCUMENT_ROOT']."/files/toy_thumbnail_".generateRandomString(4).".jpg";
   $url_bill = save_image($bill,'bill');
-  // image_resize($url_toy, $url_toy_thumbnail, 300, 300);
+  image_resize($url_toy, $url_toy_thumbnail, 300, 300);
 
   $mysql = new MySQL();
 
   $query = "SELECT * FROM `users` WHERE `Id_FB` = '".$iduserFB."'";
   $id = $mysql->query($query);
-  //
+
   if( count($id) == 0 ){
     $query = "INSERT INTO `users` ( `id`, `Nombre_cliente`, `Apellido_cliente`, `Identificacion`, `Telefono`, `Email`, `Ciudad`, `Id_FB`, `Tipo_usuario` ) ";
     $query .= "VALUES ( null, '".$_POST['nameCliente']."', '".$_POST['lastnameClient']."', '".$_POST['identification']."', '".$_POST['phone']."', '".$_POST['mail']."' , '".$_POST['country']."', '$iduserFB', '1' )";
@@ -84,7 +84,7 @@
 
     $query = "SELECT * FROM `users` WHERE `Id_FB` = '".$iduserFB."'";
     $id = $mysql->query($query);
-    $id = $id[0]['id'];
+    $id = $id;
   }
 
   $url_bill = "/files/".basename($url_bill);
