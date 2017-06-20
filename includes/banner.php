@@ -14,7 +14,7 @@
       <div class="title">
         <h5>RENUÉVALE</h5>
         <h3>LOS JUGUETES</h3>
-        <h4>A PAPÁ</h4>
+        <h4 style="line-height:1.9em">A PAPÁ</h4>
       </div>
       <div class="description" style="width: 270px;">
         <p>Compra el regalo de papá en iShop <br>
