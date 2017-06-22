@@ -29,7 +29,7 @@
           <td><?php print $value['Nombre_cliente']." ".$value['Apellido_cliente']; ?></td>
           <td><?php print $value['idProduct']; ?></td>
           <td class="state"><?php print ($value['status'] == 1)?'Activo':'Inactivo'; ?></td>
-          <td><button data="<?php print $value['id']; ?>" class="btn" type="button" name="button"><?php print ($value['status'] == 1)?'Inhabilitar':'Habilitar' ?></button></td>
+          <td><button onclick="adminEnableDisable(this)" data="<?php print $value['id']; ?>" class="btn" type="button" name="button"><?php print ($value['status'] == 1)?'Inhabilitar':'Habilitar' ?></button></td>
         </tr>
       <?php endforeach; ?>
       <?php endif; ?>
