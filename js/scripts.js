@@ -8,6 +8,9 @@ $(function(){
 	function DataTableToys() {
 		$('#toys-table').DataTable();
 	}
+	function DataTableVotes() {
+		$('#votes-table').DataTable();
+	}
 
 	function resizeBlock() {
 		if( $(window).width() > 768 ){
@@ -64,17 +67,17 @@ $(function(){
 						processData: false,
 						type: 'POST',
 						success: function(r) {
-							if( r != true ){
-								swal({
-									text: 'Error',
-									type: 'error',
-									confirmButtonColor: '#fb8f22',
-								});
-							}else{
+							if( r == 'true' ){
 								_this.siblings('.price').text((vote+100)+' puntos');
 								swal({
 									text: 'Gracias por votar',
 									type: 'success',
+									confirmButtonColor: '#fb8f22',
+								});
+							}else{
+								swal({
+									text: 'Error',
+									type: 'error',
 									confirmButtonColor: '#fb8f22',
 								});
 							}
@@ -348,6 +351,7 @@ $(function(){
 	DataTableUsers();
 	DataTableToys();
 	resizeBlock();
+	DataTableVotes();
 
 	$(window).on('load', function(event) {
 		galleryJScrollPane();
@@ -514,6 +518,7 @@ $(function(){
 
 	function AdminEnableDisable() {
 
+		$(".tables .btn").off('click');
 		$(".tables .btn").on('click', function(event) {
 			event.preventDefault();
 			var _this = $(this);
@@ -536,41 +541,95 @@ $(function(){
 			formData.append('id', id);
 			formData.append('state', state);
 
-			$.ajax({
-					url: "/services/disabledEnable.php",
-					type: 'POST',
-					data: formData,
-					cache: false,
-					contentType: false,
-					processData: false,
-					type: 'POST',
-					success: function(r) {
-						console.log(r);
-						if( r == 'true' ){
-							_this.parents('tr').first().attr('data',state).find('.state').text(text);
-							_this.text(text2);
-							_this.attr("value",text2);
-							swal({
-								title: 'Felicitaciones',
-								text: 'Se ha guardado tu informacion correctamente',
-								type: 'success',
-								confirmButtonColor: '#fb8f22',
-							});
-						}else{
-							swal({
-								title: 'Error',
-								text: 'No se pudo guardar tu informacion. Intente mas tarde.',
-								type: 'error',
-								confirmButtonColor: '#fb8f22',
-							});
-						}
-
-					}
+			swal({
+				title: 'Cargando..',
+				showCancelButton: false,
+				showConfirmButton: false,
+				showCloseButton: false,
 			});
+
+			if( $(this).parents("table").first().attr("id") == "toys-table" ){
+				$.ajax({
+						url: "/services/disabledEnable.php",
+						type: 'POST',
+						data: formData,
+						cache: false,
+						contentType: false,
+						processData: false,
+						type: 'POST',
+						success: function(r) {
+							console.log(r);
+							if( r == 'true' ){
+								_this.parents('tr').first().attr('data',state).find('.state').text(text);
+								_this.text(text2);
+								_this.attr("value",text2);
+								swal({
+									title: 'Felicitaciones',
+									text: 'Se ha guardado tu informacion correctamente',
+									type: 'success',
+									confirmButtonColor: '#fb8f22',
+								});
+							}else{
+								swal({
+									title: 'Error',
+									text: 'No se pudo guardar tu informacion. Intente mas tarde.',
+									type: 'error',
+									confirmButtonColor: '#fb8f22',
+								});
+							}
+
+						}
+				});
+			}else{
+				$.ajax({
+						url: "/services/disabledEnableVote.php",
+						type: 'POST',
+						data: formData,
+						cache: false,
+						contentType: false,
+						processData: false,
+						type: 'POST',
+						success: function(r) {
+							console.log(r);
+							if( r == 'true' ){
+								_this.parents('tr').first().attr('data',state).find('.state').text(text);
+								_this.text(text2);
+								_this.attr("value",text2);
+								swal({
+									title: 'Felicitaciones',
+									text: 'Se ha guardado tu informacion correctamente',
+									type: 'success',
+									confirmButtonColor: '#fb8f22',
+								});
+							}else{
+								swal({
+									title: 'Error',
+									text: 'No se pudo guardar tu informacion. Intente mas tarde.',
+									type: 'error',
+									confirmButtonColor: '#fb8f22',
+								});
+							}
+
+						}
+				});
+			}
+
+
 		});
 
 	}
 
+
+	$(window).on('load', function(event) {
+		AdminEnableDisable();
+	});
+
 	AdminEnableDisable();
+
+	$(".tables .dataTables_wrapper .dataTables_paginate .paginate_button").on('click', function(event) {
+		AdminEnableDisable();
+	});
+
+
 
 });

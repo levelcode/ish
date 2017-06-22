@@ -24,6 +24,7 @@
           <div class="tables">
             <?php include "./includes/usuarios.php" ?>
             <?php include "./includes/productos.php" ?>
+            <?php include "./includes/votes.php" ?>
           </div>
         </div>
       </div>

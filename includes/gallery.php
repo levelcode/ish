@@ -2,7 +2,7 @@
   require_once($_SERVER['DOCUMENT_ROOT'].'/libraries/connection.php');
   date_default_timezone_set("America/Bogota");
   $mysql = new MySQL();
-  $query = "SELECT * FROM `products` INNER JOIN `users` ON `users`.`id` = `products`.`Id_usuario` WHERE `Estado` = 1 ";
+  $query = "SELECT `products`.*, `users`.`Nombre_cliente`, `users`.`Apellido_cliente` FROM `products` INNER JOIN `users` ON `users`.`id` = `products`.`Id_usuario` WHERE `Estado` = 1 ";
   $products = $mysql->query($query);
 ?>
 <div id="gallery" class="container box-container">
@@ -24,8 +24,12 @@
             <p><?php print $value['Nombre_del_juguete'] ?></p>
           </div>
           <div class="description">
-            <span class="price"><?php print empty($value['Puntos'])?'0':$value['Puntos'] ?> puntos</span>
-            <?php if( date("F j, Y, g:i a") == 'June 27, 2017, 1:00 am' ): ?>
+            <?php
+              $query = "SELECT count(*) * 100 AS `c` FROM `votes` WHERE `votes`.`status` = 1 AND `votes`.`idProduct` = ".$value['id'];
+              $votes = $mysql->query($query);
+            ?>
+            <span class="price"><?php print empty($votes[0]['c'])?'0':$votes[0]['c'] ?> puntos</span>
+            <?php if( open_votes() ): ?>
               <input type="button" data="<?php print $value['id'] ?>" class="vote" value="VOTAR">
             <?php else: ?>
               <input type="button" data="openmodal" class="vote" value="VOTAR">

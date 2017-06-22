@@ -57,4 +57,28 @@ class MySQL{
   }
 
 }
+
+function dateDifference($date_1 , $date_2 , $differenceFormat = '%a' ){
+  $datetime1 = date_create($date_1);
+  $datetime2 = date_create($date_2);
+  $interval = date_diff($datetime1, $datetime2);
+  return $interval->format($differenceFormat);
+}
+
+
+function open_votes(){
+  date_default_timezone_set("America/Bogota");
+  $vote = false;
+
+  $day_start = "28";
+  $month = "June";
+  $year = "2017";
+  $hour = "8:00 am";
+
+  if( date("F") == $month && ( date("j") > $day_start ) && dateDifference(date("F j, Y, g:i a"),"$month $day_start, $year, $hour") <= 0 ){
+    $vote = true;
+  }
+
+  return $vote;
+}
 ?>

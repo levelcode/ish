@@ -1,7 +1,7 @@
 <?php
   require_once($_SERVER['DOCUMENT_ROOT'].'/libraries/connection.php');
   $mysql = new MySQL();
-  $query = "SELECT * FROM `products` INNER JOIN `users` ON `users`.`id` = `products`.`Id_usuario` ";
+  $query = "SELECT `products`.*, `users`.`Nombre_cliente`, `users`.`Apellido_cliente` FROM `products` INNER JOIN `users` ON `users`.`id` = `products`.`Id_usuario` ";
   $products = $mysql->query($query);
 ?>
 <div class="table-products">
