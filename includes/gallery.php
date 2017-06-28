@@ -4,6 +4,15 @@
   $mysql = new MySQL();
   $query = "SELECT `products`.*, `users`.`Nombre_cliente`, `users`.`Apellido_cliente` FROM `products` INNER JOIN `users` ON `users`.`id` = `products`.`Id_usuario` WHERE `Estado` = 1 ";
   $products = $mysql->query($query);
+
+  function thumbnail($url,$w,$h){
+    $old = pathinfo($url);
+    $url_new = $old['dirname']."/".$old['filename']."_thumbnail.".$old['extension'];
+    if( !file_exists($url_new) ){
+      exec("convert -size 200x200 -quality 20 $url $url_new");
+    }
+    return "//lasubastadepapa.com/files/".$old['filename']."_thumbnail.".$old['extension'];
+  }
 ?>
 <div id="gallery" class="container box-container">
   <div class="row">
@@ -17,7 +26,7 @@
 
       <?php foreach ($products as $key => $value): ?>
         <div class="item">
-          <div class="img popup" data-img="<?php print $value['Imagen_juguete'] ?>" style="background-image: url(<?php print $value['Imagen_juguete'] ?>); height: 200px; background-size: cover;  background-position: center;">
+          <div class="img popup" data-img="<?php print "//lasubastadepapa.com".$value['Imagen_juguete'] ?>" style="background-image: url(<?php print thumbnail("/home/lasubastadepapa/public_html".$value['Imagen_juguete'],200,200); ?>); height: 200px; background-size: cover;  background-position: center;">
           </div>
           <div class="title">
             <span><?php print $value['Nombre_cliente']." ".$value['Apellido_cliente'] ?></span>
@@ -32,7 +41,9 @@
             <?php if( open_votes() ): ?>
               <input type="button" data="<?php print $value['id'] ?>" class="vote" value="VOTAR">
             <?php else: ?>
-              <input type="button" data="openmodal" class="vote" value="VOTAR">
+              <?php if( !btnVote() ): ?>
+                <input type="button" data="openmodal" class="vote" value="VOTAR">
+              <?php endif; ?>
             <?php endif; ?>
           </div>
         </div>

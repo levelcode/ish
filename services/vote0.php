@@ -3,7 +3,7 @@
   if( isset($_SESSION['fb_user']) ){
     require_once('../libraries/connection.php');
     $ID = $_POST['id'];
-    $VOTE = $_POST['vote'];
+    $VOTE = $_POST['vote00'];
     $mysql = new MySQL();
     $fbid = $_SESSION['fb_user']['id'];
 

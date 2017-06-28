@@ -323,11 +323,11 @@ ul, li{
   background-image: -webkit-linear-gradient( -90deg, rgb(251,143,34) 0%, rgb(236,74,13) 100%);
   background-image: -ms-linear-gradient( -90deg, rgb(251,143,34) 0%, rgb(236,74,13) 100%);
   max-width: 1340px;
-  margin: 190px auto 660px;
+  margin: 190px auto 6635px !important;
   box-sizing: border-box;
   padding: 17px;
   @include desktop-normal{
-    margin-bottom: 594px;
+    margin-bottom: 594px !important;
     padding-left: 0;
     padding-right: 0;
   }
@@ -338,7 +338,7 @@ ul, li{
     margin-bottom: 0;
   }
   @include mobile-sm{
-    margin-bottom: 200px;
+    margin-bottom: 200px !important;
   }
   .main{
     background: $gray-bg-main url("../../assets/focus-main.png") no-repeat;

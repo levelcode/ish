@@ -228,6 +228,7 @@
     }
   }
   .img{
+    text-align: center;
     @include desktop-normal-xs {
       display: none;
     }
@@ -237,6 +238,7 @@
     img{
       width: 100%;
       height: auto;
+      max-width: 500px;
       @include desktop-normal{
         width: 80%;
         float: right;

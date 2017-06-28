@@ -66,19 +66,29 @@ function dateDifference($date_1 , $date_2 , $differenceFormat = '%a' ){
 }
 
 
-function open_votes(){
-  date_default_timezone_set("America/Bogota");
-  $vote = false;
+date_default_timezone_set("America/Bogota");
 
-  $day_start = "28";
-  $month = "June";
-  $year = "2017";
-  $hour = "8:00 am";
-
-  if( date("F") == $month && ( date("j") > $day_start ) && dateDifference(date("F j, Y, g:i a"),"$month $day_start, $year, $hour") <= 0 ){
-    $vote = true;
+function form(){
+  if( time() >= strtotime("27 June 2017 08:00:00pm") ){
+    return true;
+  }else{
+    return false;
   }
+}
 
-  return $vote;
+function btnVote(){
+  if( time() >= strtotime("30 June 2017 12:00:00pm") ){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+function open_votes(){
+  if( time() >= strtotime("28 June 2017 08:00:00am") && time() <= strtotime("30 June 2017 12:00:00pm") ){
+    return true;
+  }else{
+    return false;
+  }
 }
 ?>

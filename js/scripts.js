@@ -57,9 +57,9 @@ $(function(){
 				var vote = _this.siblings('.price').text();
 				vote = parseInt(vote);
 				formData.append('id', id);
-				formData.append('vote', vote);
+				formData.append('vote00', vote);
 				$.ajax({
-						url: "/services/vote.php",
+						url: "/services/vote0.php",
 						type: 'POST',
 						data: formData,
 						cache: false,

@@ -1,5 +1,13 @@
+<?php
+  require_once($_SERVER['DOCUMENT_ROOT'].'/libraries/connection.php');
+  $cssClass = "col-xs-12 col-md-6 col-lg-6";
+  if( form() ){
+    $cssClass = "col-xs-12 col-md-12 col-lg-12";
+  }
+?>
 <div id="form" class="container">
   <div class="row">
+    <?php if( !form() ): ?>
     <div class="form col-xs-12 col-md-6 col-lg-6">
       <form>
         <h5>REGISTRA TU FACTURA</h5>
@@ -46,7 +54,8 @@
         <input class="btn-sb" type="submit" name="send" value="ENTRAR">
       </form>
     </div>
-    <div class="img col-xs-12 col-md-6 col-lg-6">
+    <?php endif; ?>
+    <div class="img <?php print $cssClass ?>">
       <div>
         <a href="http://www.ishopcolombia.com/"><img src="../assets/juguetes_form.png" alt="fotm" title="form"></a>
       </div>
