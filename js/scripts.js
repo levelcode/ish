@@ -57,9 +57,15 @@ $(function(){
 				var vote = _this.siblings('.price').text();
 				vote = parseInt(vote);
 				formData.append('id', id);
-				formData.append('vote00', vote);
+				formData.append('vote', vote);
+				swal({
+					title: 'Cargando..',
+					showCancelButton: false,
+					showConfirmButton: false,
+					showCloseButton: false,
+				});
 				$.ajax({
-						url: "/services/vote0.php",
+						url: "/services/vote.php",
 						type: 'POST',
 						data: formData,
 						cache: false,
@@ -76,7 +82,7 @@ $(function(){
 								});
 							}else{
 								swal({
-									text: 'Error',
+									text: "Ya votaste por este juguete.",
 									type: 'error',
 									confirmButtonColor: '#fb8f22',
 								});
